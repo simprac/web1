@@ -17,7 +17,9 @@
         <article></article>
         <script>
             fetch("html").then(function(response) {
-                console.log(response);
+                response.text().then(function(text) {
+                    document.querySelector('article').innerHTML = text;
+                })
             });
         </script>
     </body>
