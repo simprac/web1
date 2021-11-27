@@ -9,6 +9,9 @@
                 .then(response => response.text())
                 .then(text => document.querySelector('p#body').innerHTML = text);
             }
+            fetch('list')
+            .then(response => response.text())
+            .then(text => document.querySelector('#list').innerHTML = text);
         </script>
     </head>
     <body>
