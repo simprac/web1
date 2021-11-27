@@ -16,7 +16,7 @@
                 let tags = "";
                 for(let item of list) {
                     item = item.trim();
-                    tags += `<li><a onclock="fetchPage('{item}')">{item.toUpperCase()}</a></li>\n`
+                    tags += `<li><a onclock="fetchPage('${item}')">${item.toUpperCase()}</a></li>\n`
                 }
                 document.querySelector('#list').innerHTML = tags;
             });
