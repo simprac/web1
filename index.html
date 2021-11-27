@@ -7,19 +7,19 @@
                 document.querySelector('h1#title').innerHTML = name.toUpperCase();
                 fetch(name)
                 .then(response => response.text())
-                .then(text => document.querySelector('p#main').innerHTML = text);
+                .then(text => document.querySelector('p#body').innerHTML = text);
             }
         </script>
     </head>
     <body>
         <h1><a href="index.html">WEB</a></h1>
-        <ol>
+        <ol id='list'>
             <li><a onclick="fetchPage('html')">HTML</a></li>
             <li><a onclick="fetchPage('css')">CSS</a></li>
             <li><a onclick="fetchPage('javascript')">JavaScript</a></li>
         </ol>
         <h1 id='title'>WEB</h1>
-        <p id="main">
+        <p id='body'>
             HTML elements are the building blocks of HTML pages. With HTML constructs, images and other objects, such as interactive forms, may be embedded into the rendered page. It provides a means to create structured documents by denoting structural semantics for text such as headings, paragraphs, lists, links, quotes and other items. HTML elements are delineated by tags, written using angle brackets.
         </p>
         <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29kaW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60">
