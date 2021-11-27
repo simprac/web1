@@ -6,7 +6,7 @@
             function fetchPage(name) {
                 fetch(name)
                 .then(response => response.text())
-                .then(text => document.querySelector('article').innerHTML = text);
+                .then(text => document.querySelector('p#main').innerHTML = text);
             }
         </script>
     </head>
@@ -18,9 +18,8 @@
             <li><a onclick="fetchPage('javascript')">JavaScript</a></li>
         </ol>
         <h1>WEB</h1>
-        <p>
-            <article>HTML elements are the building blocks of HTML pages. With HTML constructs, images and other objects, such as interactive forms, may be embedded into the rendered page. It provides a means to create structured documents by denoting structural semantics for text such as headings, paragraphs, lists, links, quotes and other items. HTML elements are delineated by tags, written using angle brackets.
-            </article>
+        <p id="main">
+            HTML elements are the building blocks of HTML pages. With HTML constructs, images and other objects, such as interactive forms, may be embedded into the rendered page. It provides a means to create structured documents by denoting structural semantics for text such as headings, paragraphs, lists, links, quotes and other items. HTML elements are delineated by tags, written using angle brackets.
         </p>
         <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29kaW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60">
     </body>
