@@ -11,7 +11,15 @@
             }
             fetch('list')
             .then(response => response.text())
-            .then(text => document.querySelector('#list').innerHTML = text);
+            .then(text => {
+                let list = text.split(',');
+                let tags = "";
+                for(let item of list) {
+                    item = item.trim();
+                    tags += `<li><a onclock="fetchPage('{item}')">{item.toUpperCase()}</a></li>\n`
+                }
+                document.querySelector('#list').innerHTML = tags;
+            });
         </script>
     </head>
     <body>
