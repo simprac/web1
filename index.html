@@ -4,10 +4,10 @@
         <title>WEB1 - Welcome</title>
         <script>
             function fetchPage(name) {
-                document.querySelector('h1#title').innerHTML = name.toUpperCase();
+                document.querySelector('#title').innerHTML = name.toUpperCase();
                 fetch(name)
                 .then(response => response.text())
-                .then(text => document.querySelector('p#body').innerHTML = text);
+                .then(text => document.querySelector('#body').innerHTML = text);
             }
             fetch('list')
             .then(response => response.text())
